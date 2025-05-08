@@ -9,6 +9,8 @@ private:
 	std::string _name;
 public:
 	//конструктор по умолчанию
+	User();
+	//конструктор с параметрами
 	User(std::string login, std::string password, std::string name);
 	//деструктор
 	~User();

@@ -1,5 +1,9 @@
 ﻿#include "User.h"
 
+User::User()
+{
+}
+
 User::User(std::string login, std::string password, std::string name) : _login(login), _password(password), _name(name)
 {
 }
