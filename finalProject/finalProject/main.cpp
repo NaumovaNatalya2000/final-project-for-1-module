@@ -28,7 +28,7 @@ int main() {
 		//подменю регистрации
 		if (basic == '1') {
 			do {
-				NewUser(arrUser[counter]);
+				NewUser(arrUser.get(), counter, usersCount);
 				counter++;
 				cout << "Вы хотите создать еще одного пользователя?(Введите y)\n"
 					<< "Если Вы хотите вернуться в главное меню, введите любой другой символ\n" << endl;

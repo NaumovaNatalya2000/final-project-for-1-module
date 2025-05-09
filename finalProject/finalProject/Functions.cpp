@@ -1,15 +1,29 @@
 ﻿#include "Functions.h"
 
-void NewUser(User& user)
+void NewUser(User* users, unsigned counter, unsigned usersCount)
 {
 	std::string login, password, name;
 	std::cout << "Введите логин" << std::endl;
-	std::cin >> login;
-	user.setLogin(login);
+
+	//проверка на повторяющийся логин
+	bool check = true;
+	while (check) {
+		std::cin >> login;
+		for (int i{}; i < usersCount; i++) {
+			if (login == users[i].getLogin()) {
+				std::cout << "Введен логин, который уже имеется в системе\n"
+					<< "Введите логин повторно" << std::endl;
+				check = true;
+				break;
+			}
+			else check = false;
+		}
+	}
+	users[counter].setLogin(login);
 	std::cout << "Введите пароль" << std::endl;
 	std::cin >> password;
-	user.setPassword(password);
+	users[counter].setPassword(password);
 	std::cout << "Введите имя" << std::endl;
 	std::cin >> name;
-	user.setName(name);
+	users[counter].setName(name);
 }
