@@ -64,3 +64,63 @@ void submenuRegistration(User* users, unsigned& counter, const unsigned& usersCo
 		system("cls");
 	} while (choiceReg == 'y' || choiceReg == 'Y');
 }
+
+void submenuMessage(User* users, const unsigned& usersCount)
+{
+	char choiceMessage{};
+	do {
+		std::string login;
+		std::string password;
+
+		std::cout << "------------Отправка сообщений------------\n"
+			<< "Выберите пункт меню:\n"
+			<< "1 - Вывести список доступных логинов\n"
+			<< "2 - Вход по логину\n"
+			<< "q - для возврата на основное меню" << std::endl;
+		std::cin >> choiceMessage;
+		system("cls");
+		if (choiceMessage == '1') {
+			//функция вывода всех пользователей
+			std::cout << "Список пользователей:" << std::endl;
+			for (int i{}; i < usersCount; i++) {
+				if (users[i].getIsValid() == true) {
+					std::cout << users[i].getLogin() << std::endl;
+				}
+			}
+		}
+		if (choiceMessage == '2') {
+			std::cout << "------------Вход в систему------------\n"
+				<< "Введите логин:" << std::endl;
+			std::cin >> login;
+			//найден ли логин
+			bool search = false;
+			//запись найденного элемента
+			unsigned i = 0;
+
+			for (; i < usersCount; i++) {
+				//проход по всем пользователям
+				if (users[i].getIsValid() == true && users[i].getLogin() == login) {
+					search = true;
+					break;
+				}
+			}
+			//если логин найден успешно
+			if (search == true) {
+				std::cout << "Пользователь с логином " << login << " найден\n"
+					<< "Введите пароль:" << std::endl;
+				std::cin >> password;
+				//если пароль совпадает
+				if (users[i].getPassword() == password) {
+					std::cout << "Вы успешно вошли в систему под логином " << login << std::endl;
+				}
+				else {
+					std::cout << "Пароль введен неверно" << std::endl;
+				}
+			}
+			//если логин не найден
+			else {
+				std::cout << "Введенного логина не существует" << std::endl;
+			}
+		}
+	} while (choiceMessage != 'q' && choiceMessage != 'Q');
+}

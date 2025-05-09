@@ -11,3 +11,6 @@ void mainMenu(char& basic);
 
 //подменю регистрации
 void submenuRegistration(User* users, unsigned& counter, const unsigned& usersCount);
+
+//подменю отправки сообщений
+void submenuMessage(User* users, const unsigned& usersCount);
