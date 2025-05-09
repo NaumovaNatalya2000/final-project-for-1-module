@@ -3,12 +3,12 @@
 #include <cstdlib>
 #include "User.h"
 #include "Functions.h"
-unsigned counter = 0;
 
 using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "");
+	unsigned counter = 0;
 	//задаем размер массива пользователей и создаем массив
 	const unsigned usersCount = 5;
 	auto arrUser{ std::make_unique<User[]>(usersCount) };

@@ -9,14 +9,14 @@ void NewUser(User* users, unsigned& counter, const unsigned& usersCount)
 	bool check = true;
 	while (check) {
 		std::cin >> login;
+		check = false;
 		for (int i{}; i < usersCount; i++) {
-			if (login == users[i].getLogin()) {
+			if (users[i].getIsValid() && login == users[i].getLogin()) {
 				std::cout << "Введен логин, который уже имеется в системе\n"
 					<< "Введите логин повторно" << std::endl;
 				check = true;
 				break;
 			}
-			else check = false;
 		}
 	}
 	users[counter].setLogin(login);
@@ -31,6 +31,7 @@ void NewUser(User* users, unsigned& counter, const unsigned& usersCount)
 	std::cout << "Пользователь создан успешно.\n"
 		<< "Логин: " << users[counter].getLogin() << std::endl;
 	std::cout << "-----------------------------------------------------" << std::endl;
+	counter++;
 }
 
 void mainMenu(char& basic)
@@ -50,13 +51,13 @@ void submenuRegistration(User* users, unsigned& counter, const unsigned& usersCo
 	char choiceReg{};
 	do {
 		//проверка не заполнен ли лимит пользователей
-		if (counter + 1 == usersCount) {
-			std::cout << "Достигнут лимит пользователей. Больше зарегистровать нельзя!" << std::endl;
+		if (counter == usersCount) {
+			std::cout << "Достигнут лимит пользователей. Больше зарегистрировать нельзя!" << std::endl;
 			break;
 		}
 		NewUser(users, counter, usersCount);
 
-		counter++;
+		
 		std::cout << "Вы хотите создать еще одного пользователя?(Введите y)\n"
 			<< "-----------------------------------------------------\n"
 			<< "Если Вы хотите вернуться в главное меню, введите любой другой символ" << std::endl;
