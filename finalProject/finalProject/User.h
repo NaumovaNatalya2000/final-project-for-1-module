@@ -12,7 +12,7 @@ public:
 	//конструктор по умолчанию
 	User();
 	//конструктор с параметрами
-	User(std::string login, std::string password, std::string name);
+	User(const std::string& login, const std::string& password, const std::string& name);
 	//деструктор
 	~User();
 	//запрещаем конструкторы копирования и присваивания

@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include<iostream>
 #include<string>
+#include <vector>
+#include "Messages.h"
 #include "User.h"
 
 //создание пользователя
@@ -12,5 +14,8 @@ void mainMenu(char& basic);
 //подменю регистрации
 void submenuRegistration(User* users, unsigned& counter, const unsigned& usersCount);
 
-//подменю отправки сообщений
+//подменю входа пользователя в систему
 void submenuMessage(User* users, const unsigned& usersCount);
+
+//из входа пользователя подменю в отправку сообщений
+void submenuSending(User* users, const unsigned& usersCount, unsigned& index);

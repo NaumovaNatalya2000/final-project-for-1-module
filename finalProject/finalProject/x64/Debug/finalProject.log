@@ -1,5 +1,5 @@
 ﻿  Functions.cpp
 C:\Users\ponchik\Desktop\skillfactory\final-project-for-1-module\finalProject\finalProject\Functions.cpp(13,19): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\ponchik\Desktop\skillfactory\final-project-for-1-module\finalProject\finalProject\Functions.cpp(86,20): warning C4018: <: несоответствие типов со знаком и без знака
-x64\Debug\Functions.obj : warning LNK4042: объект указан более одного раза; лишние не учитываются
+C:\Users\ponchik\Desktop\skillfactory\final-project-for-1-module\finalProject\finalProject\Functions.cpp(144,20): warning C4018: <: несоответствие типов со знаком и без знака
   finalProject.vcxproj -> C:\Users\ponchik\Desktop\skillfactory\final-project-for-1-module\finalProject\x64\Debug\finalProject.exe

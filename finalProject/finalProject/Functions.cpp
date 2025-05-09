@@ -113,6 +113,8 @@ void submenuMessage(User* users, const unsigned& usersCount)
 				//если пароль совпадает
 				if (users[i].getPassword() == password) {
 					std::cout << "Вы успешно вошли в систему под логином " << login << std::endl;
+					//здесь у меня уже есть индекс пользователя - i - передаем его в новое подменю
+					submenuSending(users, usersCount, i);
 				}
 				else {
 					std::cout << "Пароль введен неверно" << std::endl;
@@ -124,4 +126,27 @@ void submenuMessage(User* users, const unsigned& usersCount)
 			}
 		}
 	} while (choiceMessage != 'q' && choiceMessage != 'Q');
+}
+
+void submenuSending(User* users, const unsigned& usersCount, unsigned& index)
+{
+	char choice;
+	do {
+		std::cout << "Вы вошли в систему под логином: " << users[index].getLogin() << "\n"
+			<< "1 - Вывести список пользователей\n"
+			<< "2 - Отправка сообщений одному пользователю\n"
+			<< "3 - Отправка сообщений всем пользователям\n"
+			<< "q - для возврата на предыдущее меню " << std::endl;
+		std::cin >> choice;
+		system("cls");
+		if (choice == '1') {
+			std::cout << "Список пользователей:" << std::endl;
+			for (int i{}; i < usersCount; i++) {
+				if (users[i].getIsValid() == true) {
+					std::cout << users[i].getLogin() << std::endl;
+				}
+			}
+		}
+
+	} while (choice!='q' && choice!= 'Q');
 }
