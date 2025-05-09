@@ -28,4 +28,7 @@ void NewUser(User* users, unsigned counter, unsigned usersCount)
 	users[counter].setName(name);
 	//заполняем флаг заполненности логина
 	users[counter].setIsValid(true);
+	std::cout << "Пользователь создан успешно.\n"
+		<< "Логин: " << users[counter].getLogin() << std::endl;
+	std::cout << "-----------------------------------------------------" << std::endl;
 }

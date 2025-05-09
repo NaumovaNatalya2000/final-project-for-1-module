@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ponchik\\Desktop\\skillfactory\\final-project-for-1-module\\finalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{607CA565-AE1A-4CB3-B6C1-D96A3E8F9651}|finalProject\\finalProject.vcxproj|C:\\Users\\ponchik\\Desktop\\skillfactory\\final-project-for-1-module\\finalProject\\finalProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{607CA565-AE1A-4CB3-B6C1-D96A3E8F9651}|finalProject\\finalProject.vcxproj|solutionrelative:finalProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{607CA565-AE1A-4CB3-B6C1-D96A3E8F9651}|finalProject\\finalProject.vcxproj|C:\\Users\\ponchik\\Desktop\\skillfactory\\final-project-for-1-module\\finalProject\\finalProject\\Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{607CA565-AE1A-4CB3-B6C1-D96A3E8F9651}|finalProject\\finalProject.vcxproj|solutionrelative:finalProject\\Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{607CA565-AE1A-4CB3-B6C1-D96A3E8F9651}|finalProject\\finalProject.vcxproj|C:\\Users\\ponchik\\Desktop\\skillfactory\\final-project-for-1-module\\finalProject\\finalProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{607CA565-AE1A-4CB3-B6C1-D96A3E8F9651}|finalProject\\finalProject.vcxproj|solutionrelative:finalProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{607CA565-AE1A-4CB3-B6C1-D96A3E8F9651}|finalProject\\finalProject.vcxproj|C:\\Users\\ponchik\\Desktop\\skillfactory\\final-project-for-1-module\\finalProject\\finalProject\\User.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -42,18 +42,17 @@
               "RelativeToolTip": "finalProject\\User.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-08T16:31:58.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:31:58.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Functions.cpp",
               "DocumentMoniker": "C:\\Users\\ponchik\\Desktop\\skillfactory\\final-project-for-1-module\\finalProject\\finalProject\\Functions.cpp",
               "RelativeDocumentMoniker": "finalProject\\Functions.cpp",
               "ToolTip": "C:\\Users\\ponchik\\Desktop\\skillfactory\\final-project-for-1-module\\finalProject\\finalProject\\Functions.cpp",
               "RelativeToolTip": "finalProject\\Functions.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-08T13:53:14.569Z",
               "EditorCaption": ""
@@ -80,18 +79,17 @@
               "RelativeToolTip": "finalProject\\User.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-08T12:50:35.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T12:50:35.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\ponchik\\Desktop\\skillfactory\\final-project-for-1-module\\finalProject\\finalProject\\main.cpp",
               "RelativeDocumentMoniker": "finalProject\\main.cpp",
               "ToolTip": "C:\\Users\\ponchik\\Desktop\\skillfactory\\final-project-for-1-module\\finalProject\\finalProject\\main.cpp",
               "RelativeToolTip": "finalProject\\main.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-08T12:49:31.147Z",
               "EditorCaption": ""
