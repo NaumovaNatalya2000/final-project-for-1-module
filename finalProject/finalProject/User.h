@@ -7,6 +7,7 @@ private:
 	std::string _login;
 	std::string _password;
 	std::string _name;
+	bool isValid = false;
 public:
 	//конструктор по умолчанию
 	User();
@@ -21,9 +22,11 @@ public:
 	void setLogin(const std::string& newLogin);
 	void setPassword(const std::string& newPassword);
 	void setName(const std::string& newName);
+	void setIsValid(const bool& newisValid);
 	//геттеры
 	std::string getLogin() const;
 	std::string getPassword() const;
 	std::string getName() const;
+	bool getIsValid() const;
 };
 

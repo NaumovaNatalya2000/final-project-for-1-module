@@ -25,6 +25,11 @@ void User::setName(const std::string& newName)
 	_name = newName;
 }
 
+void User::setIsValid(const bool& newisValid)
+{
+	isValid = newisValid;
+}
+
 std::string User::getLogin() const
 {
 	return _login;
@@ -38,4 +43,9 @@ std::string User::getPassword() const
 std::string User::getName() const
 {
 	return _name;
+}
+
+bool User::getIsValid() const
+{
+	return isValid;
 }

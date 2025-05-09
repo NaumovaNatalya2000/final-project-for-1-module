@@ -26,4 +26,6 @@ void NewUser(User* users, unsigned counter, unsigned usersCount)
 	std::cout << "Введите имя" << std::endl;
 	std::cin >> name;
 	users[counter].setName(name);
+	//заполняем флаг заполненности логина
+	users[counter].setIsValid(true);
 }
