@@ -184,10 +184,28 @@ void submenuSending(User* users, const unsigned& usersCount, unsigned& index, st
 				std::cout << "Логин не найден" << std::endl;
 			}
 		}
+
+		else if (choice == '3') {
+			system("cls");
+			//отправитель
+			std::string fromUser = users[index].getLogin();
+			//получатель
+			std::string toUser = "all";
+			//текст сообщения
+			std::string text;
+			std::cout << "Введите текст сообщения" << std::endl;
+			//чистка буфера
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::getline(std::cin, text);
+			messages.push_back(Messages(fromUser, toUser, text));
+		}
+
+
+
 		else if (choice == '4') {
 			std::cout << "Список сообщений:" << std::endl;
 			for (int i{}; i < messages.size(); i++) {
-				if (messages[i].getToUser() == users[index].getLogin()) {
+				if (messages[i].getToUser() == users[index].getLogin() || messages[i].getToUser() == "all") {
 					std::cout<<"Сообщение от "<< messages[i].getFromUser()<<":\t" << messages[i].getText() << std::endl;
 				}
 			}
