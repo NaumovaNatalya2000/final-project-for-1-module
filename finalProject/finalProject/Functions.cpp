@@ -66,7 +66,7 @@ void submenuRegistration(User* users, unsigned& counter, const unsigned& usersCo
 	} while (choiceReg == 'y' || choiceReg == 'Y');
 }
 
-void submenuMessage(User* users, const unsigned& usersCount)
+void submenuMessage(User* users, const unsigned& usersCount, std::vector<Messages>& messages)
 {
 	char choiceMessage{};
 	do {
@@ -112,9 +112,9 @@ void submenuMessage(User* users, const unsigned& usersCount)
 				std::cin >> password;
 				//если пароль совпадает
 				if (users[i].getPassword() == password) {
-					std::cout << "Вы успешно вошли в систему под логином " << login << std::endl;
+					system("cls");
 					//здесь у меня уже есть индекс пользователя - i - передаем его в новое подменю
-					submenuSending(users, usersCount, i);
+					submenuSending(users, usersCount, i, messages);
 				}
 				else {
 					std::cout << "Пароль введен неверно" << std::endl;
@@ -128,7 +128,7 @@ void submenuMessage(User* users, const unsigned& usersCount)
 	} while (choiceMessage != 'q' && choiceMessage != 'Q');
 }
 
-void submenuSending(User* users, const unsigned& usersCount, unsigned& index)
+void submenuSending(User* users, const unsigned& usersCount, unsigned& index, std::vector<Messages>& messages)
 {
 	char choice;
 	do {
@@ -136,6 +136,7 @@ void submenuSending(User* users, const unsigned& usersCount, unsigned& index)
 			<< "1 - Вывести список пользователей\n"
 			<< "2 - Отправка сообщений одному пользователю\n"
 			<< "3 - Отправка сообщений всем пользователям\n"
+			<< "4 - Вывести список сообщений для меня\n"
 			<< "q - для возврата на предыдущее меню " << std::endl;
 		std::cin >> choice;
 		system("cls");
@@ -147,6 +148,54 @@ void submenuSending(User* users, const unsigned& usersCount, unsigned& index)
 				}
 			}
 		}
+		else if (choice == '2') {
+			system("cls");
+			//отправитель
+			std::string fromUser = users[index].getLogin();
+			//получатель
+			std::string toUser;
+			//текст сообщения
+			std::string text;
+
+			std::cout << "---Отправка сообщения конкретному пользователю---\n"
+				<< "Введите логин, кому хотите отправить сообщение" << std::endl;
+			std::cin >> toUser;
+			//найден ли логин
+			bool search = false;
+			//запись найденного элемента
+			unsigned i = 0;
+
+			for (; i < usersCount; i++) {
+				//проход по всем пользователям
+				if (users[i].getIsValid() == true && users[i].getLogin() == toUser) {
+					search = true;
+					break;
+				}
+			}
+			if (search) {
+				std::cout << "Пользователь под логином " << toUser << " найден\n"
+					<< "Введите текст сообщения" << std::endl;
+				//чистка буфера
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				std::getline(std::cin, text);
+				messages.push_back(Messages(fromUser, toUser, text));
+			}
+			else {
+				std::cout << "Логин не найден" << std::endl;
+			}
+		}
+		else if (choice == '4') {
+			std::cout << "Список сообщений:" << std::endl;
+			for (int i{}; i < messages.size(); i++) {
+				if (messages[i].getToUser() == users[index].getLogin()) {
+					std::cout<<"Сообщение от "<< messages[i].getFromUser()<<":\t" << messages[i].getText() << std::endl;
+				}
+			}
+			system("pause");
+			system("cls");
+
+		}
+
 
 	} while (choice!='q' && choice!= 'Q');
 }

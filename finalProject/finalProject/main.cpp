@@ -1,8 +1,10 @@
 ﻿#include<iostream>
 #include<string>
+#include<vector>
 #include <cstdlib>
 #include "User.h"
 #include "Functions.h"
+#include "Messages.h"
 
 using namespace std;
 
@@ -12,6 +14,8 @@ int main() {
 	//задаем размер массива пользователей и создаем массив
 	const unsigned usersCount = 5;
 	auto arrUser{ std::make_unique<User[]>(usersCount) };
+	//вектор сообщений
+	std::vector<Messages> messages;
 
 	char basic{}; //переменная для перехода по базовому меню
 
@@ -27,7 +31,7 @@ int main() {
 		}
 		//подменю отправки сообщений
 		else if (basic == '2') {
-			submenuMessage(arrUser.get(), usersCount);
+			submenuMessage(arrUser.get(), usersCount, messages);
 			system("cls");
 		}
 	}
