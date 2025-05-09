@@ -3,4 +3,11 @@
 #include<string>
 #include "User.h"
 
-void NewUser(User* users, unsigned counter, unsigned usersCount);
+//создание пользователя
+void NewUser(User* users, unsigned& counter, const unsigned& usersCount);
+
+//основное меню
+void mainMenu(char& basic);
+
+//подменю регистрации
+void submenuRegistration(User* users, unsigned& counter, const unsigned& usersCount);
