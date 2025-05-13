@@ -10,5 +10,6 @@
    <summary>Схема работы программы</summary>
    
    </details>
-   ![Картинка](https://github.com/NaumovaNatalya2000/Images/СхемаГотовая.drawio(2).png)
+   
+   ![Картинка](СхемаГотовая.drawio(2).png)
 3. Описание пользовательских типов и функций
