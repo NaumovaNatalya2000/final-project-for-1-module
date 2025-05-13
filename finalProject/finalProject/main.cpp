@@ -1,7 +1,5 @@
 ﻿#include<iostream>
-#include<string>
 #include<vector>
-#include <cstdlib>
 #include "User.h"
 #include "Functions.h"
 #include "Messages.h"
@@ -12,7 +10,7 @@ int main() {
 	setlocale(LC_ALL, "");
 	unsigned counter = 0;
 	//задаем размер массива пользователей и создаем массив
-	const unsigned usersCount = 5;
+	const unsigned usersCount = 15;
 	auto arrUser{ std::make_unique<User[]>(usersCount) };
 	//вектор сообщений
 	std::vector<Messages> messages;

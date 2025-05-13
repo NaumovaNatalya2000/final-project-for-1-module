@@ -82,12 +82,15 @@ void submenuMessage(User* users, const unsigned& usersCount, std::vector<Message
 		system("cls");
 		if (choiceMessage == '1') {
 			//функция вывода всех пользователей
-			std::cout << "Список пользователей:" << std::endl;
+			std::cout << "Список пользователей:\n"
+				<< "-----------------------------------------------------" << std::endl;
 			for (int i{}; i < usersCount; i++) {
 				if (users[i].getIsValid() == true) {
 					std::cout << users[i].getLogin() << std::endl;
 				}
 			}
+			system("pause");
+			system("cls");
 		}
 		if (choiceMessage == '2') {
 			std::cout << "------------Вход в систему------------\n"
@@ -133,6 +136,7 @@ void submenuSending(User* users, const unsigned& usersCount, unsigned& index, st
 	char choice;
 	do {
 		std::cout << "Вы вошли в систему под логином: " << users[index].getLogin() << "\n"
+			<< "-----------------------------------------------------\n"
 			<< "1 - Вывести список пользователей\n"
 			<< "2 - Отправка сообщений одному пользователю\n"
 			<< "3 - Отправка сообщений всем пользователям\n"
@@ -141,12 +145,15 @@ void submenuSending(User* users, const unsigned& usersCount, unsigned& index, st
 		std::cin >> choice;
 		system("cls");
 		if (choice == '1') {
-			std::cout << "Список пользователей:" << std::endl;
+			std::cout << "Список пользователей:\n"
+				       << "-----------------------------------------------------" << std::endl;
 			for (int i{}; i < usersCount; i++) {
 				if (users[i].getIsValid() == true) {
 					std::cout << users[i].getLogin() << std::endl;
 				}
 			}
+			system("pause");
+			system("cls");
 		}
 		else if (choice == '2') {
 			system("cls");
@@ -203,7 +210,8 @@ void submenuSending(User* users, const unsigned& usersCount, unsigned& index, st
 
 
 		else if (choice == '4') {
-			std::cout << "Список сообщений:" << std::endl;
+			std::cout << "Список сообщений:\n"
+						 << "-----------------------------------------------------" << std::endl;
 			for (int i{}; i < messages.size(); i++) {
 				if (messages[i].getToUser() == users[index].getLogin() || messages[i].getToUser() == "all") {
 					std::cout<<"Сообщение от "<< messages[i].getFromUser()<<":\t" << messages[i].getText() << std::endl;
