@@ -8,6 +8,6 @@
 2. Описание выбранного решения
    <details> 
    <summary>Схема работы программы</summary>
-   <img src = "https://disk.yandex.ru/i/fHc8bEe7C1-g8Q">
+   <img src = "[https://disk.yandex.ru/i/fHc8bEe7C1-g8Q](https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2F%D0%A1%D1%85%D0%B5%D0%BC%D0%B0%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F.drawio%20(2).png)">
    </details>
 3. Описание пользовательских типов и функций
