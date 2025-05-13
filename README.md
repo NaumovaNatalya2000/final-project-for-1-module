@@ -8,6 +8,7 @@
 2. Описание выбранного решения
    <details> 
    <summary>Схема работы программы</summary>
-   ![](https://github.com/NaumovaNatalya2000/Images/blob/main/%D0%A1%D1%85%D0%B5%D0%BC%D0%B0%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F.drawio%20(2).png)
+   
    </details>
+   ![](https://github.com/NaumovaNatalya2000/Images/blob/main/%D0%A1%D1%85%D0%B5%D0%BC%D0%B0%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F.drawio%20(2).png)
 3. Описание пользовательских типов и функций
